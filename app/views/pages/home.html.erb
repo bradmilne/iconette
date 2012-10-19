@@ -1,0 +1,13 @@
+<h1>Iconette</h1>
+<p>The style guide</p>
+<br>
+<% @latest_feature.each do |latest| %>
+  <%= latest.title %><br>
+  <%= latest.body %>
+<% end %>
+
+<br>
+<h1>The list of all Features</h1>
+<% @feature_titles.each do |feature| %>
+  <%= feature.title %><br>
+<% end %>

@@ -1,0 +1,4 @@
+<h1>Feature</h1>
+<% @features.each do |feature| %>
+	<%= link_to feature.title, feature_path(feature) %> <br>
+<% end %>
