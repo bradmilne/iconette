@@ -16,6 +16,7 @@ ActiveAdmin.register Feature do
         app_f.input :name
         app_f.input :description
         app_f.input :price
+        app_f.input :image
       end
     end
     f.actions
