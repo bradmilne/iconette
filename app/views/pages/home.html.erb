@@ -1,13 +1,19 @@
-<h1>Iconette</h1>
-<p>The style guide</p>
-<br>
-<% @latest_feature.each do |latest| %>
-  <%= latest.title %><br>
-  <%= latest.body %>
-<% end %>
+
 
 <br>
-<h1>The list of all Features</h1>
-<% @feature_titles.each do |feature| %>
-  <%= feature.title %><br>
-<% end %>
+<div class="row">
+  <div class="span8">
+  <% @latest_feature.each do |latest| %>
+    <h1><%= latest.title %><br></h1>
+    <%= image_tag latest.image %><br>
+    <%= latest.body %>
+  <% end %>
+  </div>
+
+  <br>
+  <div class="span4">
+    <h6>Check out our other featured looks</h6>
+    <% @feature_titles.each do |feature| %>
+      <%= link_to feature.title, feature_path(feature) %><br>
+    <% end %>
+  </div>

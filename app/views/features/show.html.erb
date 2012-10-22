@@ -1,5 +1,17 @@
-<h1>Feature</h1>
 
-<h2><%= @feature.title %></h2>
+<br>
+<div class="row">
+  <div class="span8">
 
-<p><%= @feature.body %></p
+    <h1><%= @feature.title %><br></h1>
+    <%= @feature.body %>
+
+  </div>
+
+  <br>
+  <div class="span4">
+    <h6>Check out our other featured looks</h6>
+    <% @features.each do |feature| %>
+      <%= link_to feature.title, feature_path(feature) %><br>
+    <% end %>
+  </div>

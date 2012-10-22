@@ -7,6 +7,7 @@ class FeaturesController < ApplicationController
   
   def show
     @feature = Feature.find(params[:id])
+    @features = Feature.all
   end
   
 end
